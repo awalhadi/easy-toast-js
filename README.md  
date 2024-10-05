@@ -4,7 +4,6 @@ A robust, object-oriented toast notification library with zero dependencies.
 
 ## Features
 
-- ✨ Object-oriented design for extensibility
 - 🎨 Four pre-styled types: success, error, warning, info
 - ⚙️ Customizable options
 - 🔄 Queue management for multiple toasts
