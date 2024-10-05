@@ -1,0 +1,39 @@
+{
+  "name": "easy-toast-js",
+  "version": "1.0.0",
+  "description": "A simple Toastr notification package using Tailwind CSS and Vanilla JavaScript with no dependencies.",
+  "main": "dist/easyToast.min.js",
+  "module": "dist/easyToast.esm.js",
+  "types": "dist/easyToast.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "toastr",
+    "notification",
+    "tailwind",
+    "vanilla-javascript",
+    "cdn",
+    "toast",
+    "notification",
+    "alert",
+    "message",
+    "popup"
+  ],
+  "author": "A Awal Hadi",
+  "license": "MIT",
+  "devDependencies": {
+    "uglify-js": "^3.14.1"
+  },
+  "dependencies": {
+    "jest": "^29.7.0",
+    "rollup": "^4.24.0",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awalhadi/easy-toast-js.git"
+  }
+}
