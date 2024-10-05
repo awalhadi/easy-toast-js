@@ -8,7 +8,8 @@
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "build:js": "uglifyjs src/index.js -o dist/easyToast.min.js --compress --mangle"
   },
   "keywords": [
     "toastr",
@@ -30,7 +31,8 @@
   "dependencies": {
     "jest": "^29.7.0",
     "rollup": "^4.24.0",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-terser": "^7.0.2",
+    "uglifyjs": "^2.4.11"
   },
   "repository": {
     "type": "git",
