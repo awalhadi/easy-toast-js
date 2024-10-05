@@ -1,4 +1,3 @@
-
 # Toast Notification Library Documentation
 
 A robust, object-oriented toast notification library with zero dependencies.
@@ -26,7 +25,7 @@ A robust, object-oriented toast notification library with zero dependencies.
 
 ```javascript
 // Use the default instance
-  toast.success('Operation successful!');
+toast.success('Operation successful!');
 toast.error('Something went wrong');
 toast.warning('Be careful');
 toast.info('Did you know?');
