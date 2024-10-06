@@ -1,6 +1,6 @@
 {
   "name": "easy-toast-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple Toastr notification package using Tailwind CSS and Vanilla JavaScript with no dependencies.",
   "main": "dist/easyToast.min.js",
   "module": "dist/easyToast.esm.js",

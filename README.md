@@ -33,6 +33,9 @@ npm i easy-toast-js
 ### 2. Basic Usage
 
 ```javascript
+// when install throw npm import like below
+import { toast } from "easy-toast-js";
+
 // Use the default instance
 toast.success("Operation successful!");
 toast.error("Something went wrong");
