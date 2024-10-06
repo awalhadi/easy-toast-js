@@ -27,7 +27,7 @@ npm i easy-toast-js
 ### 1. Include the Script
 
 ```html
-<script src="path/to/toast-manager.js"></script>
+<script src="path/to/easyToast.min.js"></script>
 ```
 
 ### 2. Basic Usage
