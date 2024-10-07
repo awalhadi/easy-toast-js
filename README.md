@@ -27,7 +27,9 @@ npm i easy-toast-js
 ### 1. Include the Script
 
 ```html
-<script src="path/to/easyToast.min.js"></script>
+<script src="
+https://cdn.jsdelivr.net/npm/easy-toast-js@1.0.2/dist/easyToast.min.js
+"></script>
 ```
 
 ### 2. Basic Usage
