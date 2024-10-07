@@ -6,10 +6,11 @@
   "module": "dist/easyToast.esm.js",
   "types": "dist/easyToast.d.ts",
   "scripts": {
-    "build": "uglifyjs src/index.js -o dist/easyToast.min.js -c -m --mangle-props",
+    "build": "npm run prod",
     "test": "jest",
-    "prod": "terser src/index.js -o dist/easyToast.min.js",
-    "prepublishOnly": "uglifyjs src/index.js -o dist/easyToast.min.js -c -m --mangle-props"
+    "prod": "terser src/index.js -o dist/easy-toast.min.js",
+    "prepublishOnly": "uglifyjs src/index.js -o dist/easy-toast.min.js -c -m --mangle-props",
+    "build:css": "tailwindcss -i ./src/style.css -o ./dist/easy-toast.min.css --minify"
   },
   "keywords": [
     "toastr",
@@ -26,6 +27,7 @@
   "author": "A Awal Hadi",
   "license": "MIT",
   "devDependencies": {
+    "tailwindcss": "^3.4.13",
     "terser": "^5.34.1",
     "uglify-js": "^3.14.1"
   },
