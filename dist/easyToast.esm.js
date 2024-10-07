@@ -27,20 +27,20 @@ class ToastManager {
     (this.container = document.createElement("div")),
       (this.container.className = this.options.containerClass),
       document.body.appendChild(this.container);
-    this.container.style.cssText = `\n      position:fixed;\n      z-index:9999;\n      pointer-events:none;\n      ${
+    this.container.style.cssText = `\n position:fixed;\n z-index:9999;\n pointer-events:none;\n ${
       {
         "top-right": "top:1rem;right:1rem",
         "top-left": "top:1rem;left:1rem",
         "bottom-right": "bottom:1rem;right:1rem",
         "bottom-left": "bottom:1rem;left:1rem",
       }[this.options.position]
-    }\n    `;
+    }\n `;
   }
   injectStyles() {
     const t = document.createElement("style");
     (t.id = "toast-styles"),
       (t.textContent =
-        "\n      .toast-container{max-width:350px;width:100%}\n      .toast{\n        display:flex;\n        align-items:center;\n        gap:8px;\n        margin-bottom:0.5rem;\n        padding:0.80rem;\n        border-radius:0.375rem;\n        color:#fff;\n        font-family:system-ui,-apple-system,sans-serif;\n        font-size:0.875rem;\n        line-height:1.5;\n        pointer-events:auto;\n        position:relative;\n        overflow:hidden;\n        animation:toast-in .3s ease-in-out;\n        box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);\n      }\n      .toast-content{flex-grow:1}\n      .toast-icon{flex-shrink:0}\n      .toast-close{\n        flex-shrink:0;\n        cursor:pointer;\n        opacity:0.7;\n        transition:opacity .15s ease;\n      }\n      .toast-close:hover{opacity:1}\n      .toast-progress{\n        position:absolute;\n        bottom:0;\n        left:0;\n        width:100%;\n        height:3px;\n        background-color:rgba(255,255,255,0.3);\n      }\n      .toast-progress-bar{\n        height:100%;\n        background-color:rgba(255,255,255,0.7);\n        animation:toast-progress .5s linear infinite;\n      }\n      .toast-success{background-color:#38d207}\n      .toast-error{background-color:#e82004}\n      .toast-warning{background-color:#e8d704}\n      .toast-info{background-color:#2563EB}\n      @keyframes toast-in{\n        from{transform:translateY(100%);opacity:0}\n        to{transform:translateY(0);opacity:1}\n      }\n    "),
+        "\n .toast-container{max-width:350px;width:100%}\n .toast{\n display:flex;\n align-items:center;\n gap:8px;\n margin-bottom:0.5rem;\n padding:0.80rem;\n border-radius:0.375rem;\n color:#fff;\n font-family:system-ui,-apple-system,sans-serif;\n font-size:0.875rem;\n line-height:1.5;\n pointer-events:auto;\n position:relative;\n overflow:hidden;\n animation:toast-in .3s ease-in-out;\n box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);\n }\n .toast-content{flex-grow:1}\n .toast-icon{flex-shrink:0}\n .toast-close{\n flex-shrink:0;\n cursor:pointer;\n opacity:0.7;\n transition:opacity .15s ease;\n }\n .toast-close:hover{opacity:1}\n .toast-progress{\n position:absolute;\n bottom:0;\n left:0;\n width:100%;\n height:3px;\n background-color:rgba(255,255,255,0.3);\n }\n .toast-progress-bar{\n height:100%;\n background-color:rgba(255,255,255,0.7);\n animation:toast-progress .5s linear infinite;\n }\n .toast-success{background-color:#38d207}\n .toast-error{background-color:#e82004}\n .toast-warning{background-color:#e8d704}\n .toast-info{background-color:#2563EB}\n @keyframes toast-in{\n from{transform:translateY(100%);opacity:0}\n to{transform:translateY(0);opacity:1}\n }\n "),
       document.head.appendChild(t);
   }
   show(t, o = "info") {
@@ -49,7 +49,7 @@ class ToastManager {
     (e.className = `toast toast-${o}`),
       e.setAttribute("role", "alert"),
       e.setAttribute("aria-live", "polite"),
-      (e.innerHTML = `\n      <span class="toast-icon" aria-hidden="true">${this.icons[o]}</span>\n      <div class="toast-content">${t}</div>\n      <button class="toast-close" aria-label="Close">${this.icons.close}</button>\n      <div class="toast-progress">\n        <div class="toast-progress-bar"></div>\n      </div>\n    `);
+      (e.innerHTML = `\n <span class="toast-icon" aria-hidden="true">${this.icons[o]}</span>\n <div class="toast-content">${t}</div>\n <button class="toast-close" aria-label="Close">${this.icons.close}</button>\n <div class="toast-progress">\n <div class="toast-progress-bar"></div>\n </div>\n `);
     e.querySelector(".toast-close").addEventListener("click", () =>
       this.remove(e)
     );

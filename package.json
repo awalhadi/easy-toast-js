@@ -6,9 +6,9 @@
   "module": "dist/easyToast.esm.js",
   "types": "dist/easyToast.d.ts",
   "scripts": {
-    "build": "uglifyjs src/index.js -o dist/easyToast.min.js --compress --mangle",
+    "build": "uglifyjs src/index.js -o dist/easyToast.min.js -c -m --mangle-props",
     "test": "jest",
-    "prepublishOnly": "uglifyjs src/index.js -o dist/easyToast.min.js --compress --mangle"
+    "prepublishOnly": "uglifyjs src/index.js -o dist/easyToast.min.js -c -m --mangle-props"
   },
   "keywords": [
     "toastr",

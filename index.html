@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="dist/easyToast.min.js"></script>
+</head>
+
+<body>
+
+    <div class="toast-container">
+
+        <!-- button to show toast   -->
+        <button class="btn btn-primary" onclick="toast.show('hello world')">Show Toast</button>
+    </div>
+
+    <script>
+        new ToastManager({
+            containerClass: "toast-container",
+            position: "top-left"
+        });
+
+    </script>
+</body>
+
+</html>
