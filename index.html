@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!-- <link rel="stylesheet" href="/dist/easy-toast.min.css"> -->
-
+    <link rel="stylesheet" href="/dist/style.css">
 </head>
 
 <body>
@@ -15,13 +14,14 @@
     <div class="toast-container">
 
         <!-- button to show toast   -->
-        <button class="btn btn-primary" onclick="toast.success('hello world')">Show Toast</button>
+        <button class="bg-green-800" onclick="toast.info('hello world i am hadi and test some long test')">Show
+            Toast</button>
 
 
     </div>
 
 
-    <script src="/dist/easy-toast.min.js"></script>
+    <script src="/dist/easy-toast.umd.js"></script>
     <script>
         const toastManager = new ToastManager({
             containerClass: "toast-container",

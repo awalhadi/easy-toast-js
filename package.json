@@ -1,17 +1,23 @@
 {
   "name": "easy-toast-js",
-  "version": "1.0.2",
-  "description": "A simple Toastr notification package using Tailwind CSS and Vanilla JavaScript with no dependencies.",
+  "version": "1.1.0",
+  "author": "A Awal Hadi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awalhadi/easy-toast.git"
+  },
   "main": "dist/easyToast.min.js",
   "module": "dist/easyToast.esm.js",
-  "types": "dist/easyToast.d.ts",
-  "scripts": {
-    "build": "npm run prod",
-    "test": "jest",
-    "prod": "terser src/index.js -o dist/easy-toast.min.js",
-    "prepublishOnly": "uglifyjs src/index.js -o dist/easy-toast.min.js -c -m --mangle-props",
-    "build:css": "tailwindcss -i ./src/style.css -o ./dist/easy-toast.min.css --minify"
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.13",
+    "terser": "^5.34.1",
+    "vite": "^5.4.8"
   },
+  "description": "A simple Toastr notification package using Tailwind CSS and Vanilla JavaScript with no dependencies.",
   "keywords": [
     "toastr",
     "notification",
@@ -24,19 +30,12 @@
     "message",
     "popup"
   ],
-  "author": "A Awal Hadi",
   "license": "MIT",
-  "devDependencies": {
-    "tailwindcss": "^3.4.13",
-    "terser": "^5.34.1",
-    "uglify-js": "^3.14.1"
+  "scripts": {
+    "build": "npm run build:css && vite build",
+    "prod": "terser src/index.js -o dist/easy-toast.min.js",
+    "prepublishOnly": "uglifyjs src/index.js -o dist/easy-toast.min.js -c -m --mangle-props",
+    "build:css": "postcss ./src/easy-toast.css -o ./dist/easy-toast.min.css"
   },
-  "dependencies": {
-    "jest": "^29.7.0",
-    "uglifyjs": "^2.4.11"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/awalhadi/easy-toast.git"
-  }
+  "types": "dist/easyToast.d.ts"
 }
