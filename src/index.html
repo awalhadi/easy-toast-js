@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./../dist/easy-toast.min.css">
+</head>
+
+<body>
+
+    <di class="toast-container">
+
+        <!-- button to show toast   -->
+        <button class="bg-blue-800 text-white p-3 rounded-md mb-6"
+            onclick="toast.info('hello world i am hadi and test some long test')">Show
+            Info Toast</button>
+        <br />
+        <!-- button to show toast   -->
+        <button class="bg-green-600 text-white p-3 rounded-md mb-6"
+            onclick="toast.success('hello world i am hadi and test some long test')">Show
+            Success Toast</button>
+        <br />
+        <button class="bg-orange-500 text-white p-3 rounded-md mb-6"
+            onclick="toast.warning('hello world i am hadi and test some long test')">Show
+            Warning Toast</button>
+        <br />
+        <button class="bg-red-600 text-white p-3 rounded-md mb-6"
+            onclick="toast.error('hello world i am hadi and test some long test')">Show
+            Error Toast</button>
+
+
+        </div>
+
+
+        <script src="./../dist/easy-toast.umd.js"></script>
+        <script>
+            const toastManager = new ToastManager({
+                containerClass: "toast-container",
+                position: "top-left"
+            });
+
+        </script>
+</body>
+
+</html>
