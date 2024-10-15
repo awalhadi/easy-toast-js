@@ -32,7 +32,7 @@ https://cdn.jsdelivr.net/npm/easy-toast-js@2.0.0/dist/easyToast.min.js
 "></script>
 ```
 
-## If not install Tailwind Css then add `easy-toast.min.css` or `import easy-toast.min.css`
+- If not install Tailwind Css then add `easy-toast.min.css` or `import easy-toast.min.css`
 
 ### 2. Basic Usage
 
