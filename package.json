@@ -34,7 +34,6 @@
   "scripts": {
     "build": "vite build && npm run build:css",
     "prod": "terser src/index.js -o dist/easy-toast.min.js",
-    "prepublishOnly": "uglifyjs src/index.js -o dist/easy-toast.min.js -c -m --mangle-props",
     "build:css": "postcss ./src/easy-toast.css -o ./dist/easy-toast.min.css"
   },
   "types": "dist/easyToast.d.ts"
