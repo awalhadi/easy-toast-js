@@ -8,7 +8,7 @@ export default defineConfig({
       fileName: (format) => `easy-toast.${format}.js`,
     },
     rollupOptions: {
-      external: [],
+      external: ["react", "react-dom"],
       output: {
         globals: {},
       },
