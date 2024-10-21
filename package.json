@@ -6,8 +6,8 @@
     "type": "git",
     "url": "git+https://github.com/awalhadi/easy-toast.git"
   },
-  "main": "dist/easyToast.min.js",
-  "module": "dist/easyToast.esm.js",
+  "main": "dist/easy-toast.umd.js",
+  "module": "dist/easy-toast.es.js",
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
     "autoprefixer": "^10.4.20",
