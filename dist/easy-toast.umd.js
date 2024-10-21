@@ -1,4 +1,12 @@
-(function(o){typeof define=="function"&&define.amd?define(o):o()})(function(){"use strict";class o{constructor(t={}){this.options={position:(t==null?void 0:t.position)||"top-right",maxToasts:(t==null?void 0:t.maxToasts)||8,duration:t.duration||3e3,containerClass:(t==null?void 0:t.containerClass)||"toast-container",icon:(t==null?void 0:t.icon)||this.getIcon},this.icons=this.getIcons(),this.toastQueue=[],this.init()}init(){this.createContainer()}createContainer(){this.container=document.createElement("div"),document.body.appendChild(this.container),this.setPosition(this.options.position)}setPosition(t="top-right"){const e={"top-right":"top-4 right-4","top-left":"top-4 left-4","top-center":"top-4 left-1/2 -translate-x-1/2","bottom-right":"bottom-4 right-4","bottom-left":"bottom-4 left-4","bottom-center":"bottom-4 left-1/2 -translate-x-1/2"};this.container.className=`fixed z-50 pointer-events-none ${e[t]}`}getIcon(t="info"){return{success:`<svg viewBox="0 0 24 24" class="text-green-600 w-5 h-5 mr-3">
+(function(o){typeof define=="function"&&define.amd?define(o):o()})(function(){"use strict";/**
+ * Lightweight, accessible toast notification library
+ * @version 2.0.1
+ * @author awalhadi
+ * @license MIT
+ * @see https://github.com/awalhadi/easy-toast-js
+ * @see https://portfolio.awalhadi.vercel.app
+ *
+ */class o{constructor(t={}){this.options={position:(t==null?void 0:t.position)||"top-right",maxToasts:(t==null?void 0:t.maxToasts)||8,duration:t.duration||3e3,containerClass:(t==null?void 0:t.containerClass)||"toast-container",icon:(t==null?void 0:t.icon)||this.getIcon},this.icons=this.getIcons(),this.toastQueue=[],this.init()}init(){this.createContainer()}createContainer(){this.container=document.createElement("div"),document.body.appendChild(this.container),this.setPosition(this.options.position)}setPosition(t="top-right"){const e={"top-right":"top-4 right-4","top-left":"top-4 left-4","top-center":"top-4 left-1/2 -translate-x-1/2","bottom-right":"bottom-4 right-4","bottom-left":"bottom-4 left-4","bottom-center":"bottom-4 left-1/2 -translate-x-1/2"};this.container.className=`fixed z-50 pointer-events-none ${e[t]}`}getIcon(t="info"){return{success:`<svg viewBox="0 0 24 24" class="text-green-600 w-5 h-5 mr-3">
             <path fill="currentColor"
                 d="M12,0A12,12,0,1,0,24,12,12.014,12.014,0,0,0,12,0Zm6.927,8.2-6.845,9.289a1.011,1.011,0,0,1-1.43.188L5.764,13.769a1,1,0,1,1,1.25-1.562l4.076,3.261,6.227-8.451A1,1,0,1,1,18.927,8.2Z">
             </path>

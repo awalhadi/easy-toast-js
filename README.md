@@ -28,7 +28,7 @@ npm i easy-toast-js
 
 ```html
 <script src="
-https://cdn.jsdelivr.net/npm/easy-toast-js@2.0.1/dist/easyToast.min.js
+https://cdn.jsdelivr.net/npm/easy-toast-js@2.0.12/dist/easyToast.min.js
 "></script>
 ```
 
