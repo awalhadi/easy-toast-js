@@ -2,7 +2,7 @@ var u = (h, t) => () => (t || h((t = { exports: {} }).exports, t), t.exports);
 var g = u((d, r) => {
   /**
    * Lightweight, accessible toast notification library
-   * @version 2.0.1
+   * @version 2.0.12
    * @author awalhadi
    * @license MIT
    * @see https://github.com/awalhadi/easy-toast-js

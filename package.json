@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/awalhadi/easy-toast.git"
   },
-  "main": "dist/easy-toast.umd.js",
+  "main": "dist/easy-toast.cjs.js",
   "module": "dist/easy-toast.es.js",
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
@@ -32,7 +32,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "vite build && npm run build:css",
+    "build": "vite build --outDir dist",
     "prod": "terser src/index.js -o dist/easy-toast.min.js",
     "build:css": "postcss ./src/easy-toast.css -o ./dist/easy-toast.min.css"
   },
