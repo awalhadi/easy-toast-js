@@ -4,9 +4,9 @@
   "author": "A Awal Hadi",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/awalhadi/easy-toast.git"
+    "url": "git+https://github.com/awalhadi/easy-toast-js.git"
   },
-  "main": "dist/easy-toast.cjs.js",
+  "main": "dist/easy-toast.min.js",
   "module": "dist/easy-toast.es.js",
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
@@ -33,7 +33,7 @@
   "license": "MIT",
   "scripts": {
     "build": "vite build --outDir dist",
-    "prod": "terser src/index.js -o dist/easy-toast.min.js",
+    "build:js": "terser src/index.js -o dist/easy-toast.min.js",
     "build:css": "postcss ./src/easy-toast.css -o ./dist/easy-toast.min.css"
   },
   "types": "dist/easyToast.d.ts"
